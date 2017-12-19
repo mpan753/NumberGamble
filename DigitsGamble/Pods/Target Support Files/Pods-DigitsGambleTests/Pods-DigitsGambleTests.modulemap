@@ -1,0 +1,6 @@
+framework module Pods_DigitsGambleTests {
+  umbrella header "Pods-DigitsGambleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

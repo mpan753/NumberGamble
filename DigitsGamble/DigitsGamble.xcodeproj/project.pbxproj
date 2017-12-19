@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0DF4B4C71FE8E24700C9A122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4B4C61FE8E24700C9A122 /* AppDelegate.swift */; };
-		0DF4B4C91FE8E24700C9A122 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4B4C81FE8E24700C9A122 /* ViewController.swift */; };
 		0DF4B4CC1FE8E24700C9A122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4B4CA1FE8E24700C9A122 /* Main.storyboard */; };
 		0DF4B4CE1FE8E24700C9A122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4B4CD1FE8E24700C9A122 /* Assets.xcassets */; };
 		0DF4B4D11FE8E24700C9A122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4B4CF1FE8E24700C9A122 /* LaunchScreen.storyboard */; };
 		0DF4B4DC1FE8E24700C9A122 /* DigitsGambleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4B4DB1FE8E24700C9A122 /* DigitsGambleTests.swift */; };
 		0DF4B4E71FE8E24700C9A122 /* DigitsGambleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4B4E61FE8E24700C9A122 /* DigitsGambleUITests.swift */; };
+		0DF4B4F51FE8EBFB00C9A122 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4B4F41FE8EBFB00C9A122 /* StartViewController.swift */; };
+		27EDCAC86A04BB031C06CC6D /* Pods_DigitsGambleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968A04F2031D5866B86DD80D /* Pods_DigitsGambleUITests.framework */; };
+		521833FDB74EE3707A396054 /* Pods_DigitsGambleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE5DB61D0AEF4447D8936D3 /* Pods_DigitsGambleTests.framework */; };
+		931BE43F56B4803164DEE1DB /* Pods_DigitsGamble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A2382AF655DB08A4737736 /* Pods_DigitsGamble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		0DF4B4C31FE8E24700C9A122 /* DigitsGamble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitsGamble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF4B4C61FE8E24700C9A122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0DF4B4C81FE8E24700C9A122 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0DF4B4CB1FE8E24700C9A122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DF4B4CD1FE8E24700C9A122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DF4B4D01FE8E24700C9A122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,16 @@
 		0DF4B4E21FE8E24700C9A122 /* DigitsGambleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitsGambleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF4B4E61FE8E24700C9A122 /* DigitsGambleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsGambleUITests.swift; sourceTree = "<group>"; };
 		0DF4B4E81FE8E24700C9A122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DF4B4F41FE8EBFB00C9A122 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		17CC044477230AC34D960702 /* Pods-DigitsGamble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitsGamble.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigitsGamble/Pods-DigitsGamble.release.xcconfig"; sourceTree = "<group>"; };
+		19A7F8E6584AD690F609E4E4 /* Pods-DigitsGamble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitsGamble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigitsGamble/Pods-DigitsGamble.debug.xcconfig"; sourceTree = "<group>"; };
+		28955AB70582D9D98178811E /* Pods-DigitsGambleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitsGambleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigitsGambleUITests/Pods-DigitsGambleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5FE5DB61D0AEF4447D8936D3 /* Pods_DigitsGambleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitsGambleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A2382AF655DB08A4737736 /* Pods_DigitsGamble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitsGamble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DEB5D8297FAF50D1CD0F3D8 /* Pods-DigitsGambleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitsGambleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigitsGambleUITests/Pods-DigitsGambleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		968A04F2031D5866B86DD80D /* Pods_DigitsGambleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitsGambleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC47CDED43FFE9BF943FA5E2 /* Pods-DigitsGambleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitsGambleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigitsGambleTests/Pods-DigitsGambleTests.release.xcconfig"; sourceTree = "<group>"; };
+		C95DD6828B3929AF0262A3C4 /* Pods-DigitsGambleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitsGambleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigitsGambleTests/Pods-DigitsGambleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931BE43F56B4803164DEE1DB /* Pods_DigitsGamble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521833FDB74EE3707A396054 /* Pods_DigitsGambleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27EDCAC86A04BB031C06CC6D /* Pods_DigitsGambleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				0DF4B4DA1FE8E24700C9A122 /* DigitsGambleTests */,
 				0DF4B4E51FE8E24700C9A122 /* DigitsGambleUITests */,
 				0DF4B4C41FE8E24700C9A122 /* Products */,
+				F6FA4A865AC09DDE56A84C3C /* Pods */,
+				859CB5B148DD7C14F2A2DC1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				0DF4B4C61FE8E24700C9A122 /* AppDelegate.swift */,
-				0DF4B4C81FE8E24700C9A122 /* ViewController.swift */,
+				0DF4B4F41FE8EBFB00C9A122 /* StartViewController.swift */,
 				0DF4B4CA1FE8E24700C9A122 /* Main.storyboard */,
 				0DF4B4CD1FE8E24700C9A122 /* Assets.xcassets */,
 				0DF4B4CF1FE8E24700C9A122 /* LaunchScreen.storyboard */,
@@ -125,6 +142,29 @@
 			path = DigitsGambleUITests;
 			sourceTree = "<group>";
 		};
+		859CB5B148DD7C14F2A2DC1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70A2382AF655DB08A4737736 /* Pods_DigitsGamble.framework */,
+				5FE5DB61D0AEF4447D8936D3 /* Pods_DigitsGambleTests.framework */,
+				968A04F2031D5866B86DD80D /* Pods_DigitsGambleUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6FA4A865AC09DDE56A84C3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19A7F8E6584AD690F609E4E4 /* Pods-DigitsGamble.debug.xcconfig */,
+				17CC044477230AC34D960702 /* Pods-DigitsGamble.release.xcconfig */,
+				C95DD6828B3929AF0262A3C4 /* Pods-DigitsGambleTests.debug.xcconfig */,
+				BC47CDED43FFE9BF943FA5E2 /* Pods-DigitsGambleTests.release.xcconfig */,
+				7DEB5D8297FAF50D1CD0F3D8 /* Pods-DigitsGambleUITests.debug.xcconfig */,
+				28955AB70582D9D98178811E /* Pods-DigitsGambleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DF4B4EB1FE8E24700C9A122 /* Build configuration list for PBXNativeTarget "DigitsGamble" */;
 			buildPhases = (
+				FF2C334331D05143ED5BD9F8 /* [CP] Check Pods Manifest.lock */,
 				0DF4B4BF1FE8E24700C9A122 /* Sources */,
 				0DF4B4C01FE8E24700C9A122 /* Frameworks */,
 				0DF4B4C11FE8E24700C9A122 /* Resources */,
+				099DBE2323B53B339A143EE2 /* [CP] Embed Pods Frameworks */,
+				BAA0E86F2577FC29479ED5F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DF4B4EE1FE8E24700C9A122 /* Build configuration list for PBXNativeTarget "DigitsGambleTests" */;
 			buildPhases = (
+				16409D2DE8F20EE40BBA20AB /* [CP] Check Pods Manifest.lock */,
 				0DF4B4D31FE8E24700C9A122 /* Sources */,
 				0DF4B4D41FE8E24700C9A122 /* Frameworks */,
 				0DF4B4D51FE8E24700C9A122 /* Resources */,
+				6B663273A88C375CD3408010 /* [CP] Embed Pods Frameworks */,
+				8DE824FD933C28DEC3BE7B9F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DF4B4F11FE8E24700C9A122 /* Build configuration list for PBXNativeTarget "DigitsGambleUITests" */;
 			buildPhases = (
+				064650AE2513A5115760D6A8 /* [CP] Check Pods Manifest.lock */,
 				0DF4B4DE1FE8E24700C9A122 /* Sources */,
 				0DF4B4DF1FE8E24700C9A122 /* Frameworks */,
 				0DF4B4E01FE8E24700C9A122 /* Resources */,
+				4A74688A0723DC5CFC2390FD /* [CP] Embed Pods Frameworks */,
+				7301657083F715B8CEDFFC27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,13 +306,172 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		064650AE2513A5115760D6A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DigitsGambleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		099DBE2323B53B339A143EE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DigitsGamble/Pods-DigitsGamble-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigitsGamble/Pods-DigitsGamble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16409D2DE8F20EE40BBA20AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DigitsGambleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A74688A0723DC5CFC2390FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigitsGambleUITests/Pods-DigitsGambleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B663273A88C375CD3408010 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DigitsGambleTests/Pods-DigitsGambleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigitsGambleTests/Pods-DigitsGambleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7301657083F715B8CEDFFC27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigitsGambleUITests/Pods-DigitsGambleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DE824FD933C28DEC3BE7B9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigitsGambleTests/Pods-DigitsGambleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAA0E86F2577FC29479ED5F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigitsGamble/Pods-DigitsGamble-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF2C334331D05143ED5BD9F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DigitsGamble-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DF4B4BF1FE8E24700C9A122 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DF4B4C91FE8E24700C9A122 /* ViewController.swift in Sources */,
 				0DF4B4C71FE8E24700C9A122 /* AppDelegate.swift in Sources */,
+				0DF4B4F51FE8EBFB00C9A122 /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +623,12 @@
 		};
 		0DF4B4EC1FE8E24700C9A122 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19A7F8E6584AD690F609E4E4 /* Pods-DigitsGamble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C46AC59JC9;
 				INFOPLIST_FILE = DigitsGamble/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mia.DigitsGamble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,10 +638,12 @@
 		};
 		0DF4B4ED1FE8E24700C9A122 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17CC044477230AC34D960702 /* Pods-DigitsGamble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C46AC59JC9;
 				INFOPLIST_FILE = DigitsGamble/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mia.DigitsGamble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +653,7 @@
 		};
 		0DF4B4EF1FE8E24700C9A122 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C95DD6828B3929AF0262A3C4 /* Pods-DigitsGambleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +669,7 @@
 		};
 		0DF4B4F01FE8E24700C9A122 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC47CDED43FFE9BF943FA5E2 /* Pods-DigitsGambleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +685,7 @@
 		};
 		0DF4B4F21FE8E24700C9A122 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DEB5D8297FAF50D1CD0F3D8 /* Pods-DigitsGambleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = C46AC59JC9;
@@ -485,6 +700,7 @@
 		};
 		0DF4B4F31FE8E24700C9A122 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28955AB70582D9D98178811E /* Pods-DigitsGambleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = C46AC59JC9;
@@ -516,6 +732,7 @@
 				0DF4B4ED1FE8E24700C9A122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DF4B4EE1FE8E24700C9A122 /* Build configuration list for PBXNativeTarget "DigitsGambleTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +741,7 @@
 				0DF4B4F01FE8E24700C9A122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DF4B4F11FE8E24700C9A122 /* Build configuration list for PBXNativeTarget "DigitsGambleUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +750,7 @@
 				0DF4B4F31FE8E24700C9A122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
