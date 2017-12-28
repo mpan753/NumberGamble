@@ -35,10 +35,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMa-7G-Ltg">
                                                 <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
                                                 <state key="normal" title="User A"/>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.035294117649999998" green="0.81176470590000005" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T56-Xx-p3a">
                                                 <rect key="frame" x="147" y="0.0" width="47" height="30"/>
                                                 <state key="normal" title="User B"/>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.035294117649999998" green="0.81176470590000005" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                     </stackView>
