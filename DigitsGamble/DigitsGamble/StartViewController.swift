@@ -31,27 +31,26 @@ class StartViewController: UIViewController {
     
     let isUserA = Variable(false)
     
-    
     let isUserB = Variable(false)
     
     let disposeBag = DisposeBag()
     
     
     func racBind() {
-     
+        
         // force unwrap to avoid having to deal with optionals later on
         let buttons = [userA, userB].map { $0! }
         
         // create an observable that will emit the last tapped button (which is
         // the one we want selected)
-
+        
         let selectedButton = Observable.from(
             buttons.map { button in button.rx.tap.map { button } }
             ).merge()
         
         // for each button, create a subscription that will set its `isSelected`
         // state on or off if it is the one emmited by selectedButton
-
+        
         buttons.reduce(Disposables.create()) { disposable, button in
             let subscription = selectedButton.map { $0 == button }
                 .bind(to: button.rx.isSelected)
@@ -63,9 +62,8 @@ class StartViewController: UIViewController {
             }
             .addDisposableTo(disposeBag)
         
-        buttons.reduce(false) { enabled, button in
-            return enabled || button.isSelected
-        }
-        .addDisposableTo(disposeBag)
+        
+        
+        
     }
 }
