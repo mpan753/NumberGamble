@@ -271,6 +271,17 @@
                             <outletCollection property="gestureRecognizers" destination="I1b-fl-aME" appends="YES" id="TqE-Ii-eU3"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="digit1" destination="Yrc-2V-aW8" id="WkG-cn-CY2"/>
+                        <outlet property="digit2" destination="656-fD-35p" id="RjX-xj-TqU"/>
+                        <outlet property="digit3" destination="koS-Fj-Uaz" id="sPs-aJ-sO3"/>
+                        <outlet property="digit4" destination="F29-OF-3rZ" id="ytO-xP-8cr"/>
+                        <outlet property="digit5" destination="POu-II-don" id="A3h-qd-K9U"/>
+                        <outlet property="digit6" destination="z4Z-wn-WQ0" id="HU2-K9-WbT"/>
+                        <outlet property="digit7" destination="SIJ-3f-kL5" id="OVO-M1-u6Y"/>
+                        <outlet property="digit8" destination="Ki5-bv-q4Y" id="XIt-CZ-tpb"/>
+                        <outlet property="digit9" destination="Yxj-Wv-yxz" id="plS-20-0Iw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7QI-MJ-42z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="I1b-fl-aME">

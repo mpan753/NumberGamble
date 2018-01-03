@@ -17,14 +17,9 @@ class GameModel {
     
     init(initialUser user: User) {
         self.currentUser = user
-        
     }
     
     func nextDigit() -> Int {
         return leftOverNumbers.popLast()!
-    }
-    
-    func highlight(next digit: Int) {
-        
     }
 }
