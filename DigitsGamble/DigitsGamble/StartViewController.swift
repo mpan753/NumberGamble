@@ -23,18 +23,27 @@ class StartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var userA: UIButton!
+    @IBOutlet weak var userA: UIButton! {
+        didSet {
+            userA.tag = 0
+        }
+    }
     
-    @IBOutlet weak var userB: UIButton!
+    @IBOutlet weak var userB: UIButton! {
+        didSet {
+            userB.tag = 1
+        }
+    }
     
-    @IBOutlet weak var start: UIButton!
-    
-    let isUserA = Variable(false)
-    
-    let isUserB = Variable(false)
+    @IBOutlet weak var start: UIButton! {
+        didSet {
+            start.isEnabled = false
+        }
+    }
     
     let disposeBag = DisposeBag()
     
+    var selectedUser: User?
     
     func racBind() {
         
@@ -62,8 +71,23 @@ class StartViewController: UIViewController {
             }
             .addDisposableTo(disposeBag)
         
+        selectedButton
+            .asObservable()
+            .subscribe(onNext: { [unowned self] button in
+                self.start.isEnabled = true
+                self.selectedUser = button.tag == 0 ? User.A : User.B
+            })
+            .addDisposableTo(disposeBag)
         
-        
-        
+        start
+            .rx
+            .tap
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [unowned self] _ in
+                print("[\(#line)] : \(type(of: self)).\(#function)")
+                GameEngine.shared.start(with: self.selectedUser!)
+            })
+            .addDisposableTo(disposeBag)
     }
 }
