@@ -23,17 +23,9 @@ class StartViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var userA: UIButton! {
-        didSet {
-            userA.tag = 0
-        }
-    }
+    @IBOutlet weak var userA: UIButton! { didSet { userA.tag = 0 } }
     
-    @IBOutlet weak var userB: UIButton! {
-        didSet {
-            userB.tag = 1
-        }
-    }
+    @IBOutlet weak var userB: UIButton! { didSet { userB.tag = 1 } }
     
     @IBOutlet weak var start: UIButton! {
         didSet {
@@ -41,9 +33,9 @@ class StartViewController: UIViewController {
         }
     }
     
-    let disposeBag = DisposeBag()
+    var viewModel = StartViewModel()
     
-    var selectedUser: User?
+    let disposeBag = DisposeBag()
     
     func racBind() {
         
@@ -75,19 +67,16 @@ class StartViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { [unowned self] button in
                 self.start.isEnabled = true
-                self.selectedUser = button.tag == 0 ? User.A : User.B
+                self.viewModel.selectedUserIndex = button.tag
             })
             .addDisposableTo(disposeBag)
         
-        start
-            .rx
-            .tap
-            .asObservable()
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [unowned self] _ in
-                print("[\(#line)] : \(type(of: self)).\(#function)")
-                GameEngine.shared.start(with: self.selectedUser!)
-            })
-            .addDisposableTo(disposeBag)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier! == GameScenceViewController.Identifier {
+            let gameVC = segue.destination as! GameScenceViewController
+            gameVC.viewModel = GameModel(startViewModel: viewModel)
+        }
     }
 }

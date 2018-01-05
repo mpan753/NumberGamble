@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D11C00D1FFDF55100984DFD /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D11C00C1FFDF55100984DFD /* StartViewModel.swift */; };
+		0D11C0111FFE0AE500984DFD /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D11C0101FFE0AE500984DFD /* UserInfoView.swift */; };
 		0D8C9BC91FFC862B00436337 /* GameScenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C9BC81FFC862B00436337 /* GameScenceViewController.swift */; };
 		0D8C9BCD1FFCB50100436337 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C9BCC1FFCB50100436337 /* GameEngine.swift */; };
 		0D8C9BD01FFCC98000436337 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C9BCF1FFCC98000436337 /* GameModel.swift */; };
 		0D8C9BD21FFCC9AB00436337 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C9BD11FFCC9AB00436337 /* User.swift */; };
+		0DC79A281FFF5B3300DDB0E8 /* DigitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC79A271FFF5B3300DDB0E8 /* DigitButton.swift */; };
 		0DF4B4C71FE8E24700C9A122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4B4C61FE8E24700C9A122 /* AppDelegate.swift */; };
 		0DF4B4CC1FE8E24700C9A122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4B4CA1FE8E24700C9A122 /* Main.storyboard */; };
 		0DF4B4CE1FE8E24700C9A122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4B4CD1FE8E24700C9A122 /* Assets.xcassets */; };
@@ -41,10 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D11C00C1FFDF55100984DFD /* StartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		0D11C0101FFE0AE500984DFD /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		0D8C9BC81FFC862B00436337 /* GameScenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScenceViewController.swift; sourceTree = "<group>"; };
 		0D8C9BCC1FFCB50100436337 /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		0D8C9BCF1FFCC98000436337 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		0D8C9BD11FFCC9AB00436337 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0DC79A271FFF5B3300DDB0E8 /* DigitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitButton.swift; sourceTree = "<group>"; };
 		0DF4B4C31FE8E24700C9A122 /* DigitsGamble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitsGamble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF4B4C61FE8E24700C9A122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DF4B4CB1FE8E24700C9A122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +103,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D11C00E1FFDF83C00984DFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0D8C9BD11FFCC9AB00436337 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0D11C00F1FFE0ACE00984DFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D11C0101FFE0AE500984DFD /* UserInfoView.swift */,
+				0DC79A271FFF5B3300DDB0E8 /* DigitButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		0D8C9BCA1FFCB4CF00436337 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +144,9 @@
 		0D8C9BCE1FFCB51B00436337 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				0D8C9BCC1FFCB50100436337 /* GameEngine.swift */,
 				0D8C9BCF1FFCC98000436337 /* GameModel.swift */,
-				0D8C9BD11FFCC9AB00436337 /* User.swift */,
+				0D11C00C1FFDF55100984DFD /* StartViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -152,8 +176,9 @@
 		0DF4B4C51FE8E24700C9A122 /* DigitsGamble */ = {
 			isa = PBXGroup;
 			children = (
+				0D11C00E1FFDF83C00984DFD /* Models */,
 				0D8C9BCE1FFCB51B00436337 /* View Models */,
-				0D8C9BCC1FFCB50100436337 /* GameEngine.swift */,
+				0D11C00F1FFE0ACE00984DFD /* Views */,
 				0D8C9BCA1FFCB4CF00436337 /* View Controllers */,
 				0D8C9BCB1FFCB4DE00436337 /* Support Files */,
 			);
@@ -368,13 +393,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DigitsGamble/Pods-DigitsGamble-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -506,9 +535,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D11C00D1FFDF55100984DFD /* StartViewModel.swift in Sources */,
 				0D8C9BD01FFCC98000436337 /* GameModel.swift in Sources */,
 				0DF4B4C71FE8E24700C9A122 /* AppDelegate.swift in Sources */,
+				0D11C0111FFE0AE500984DFD /* UserInfoView.swift in Sources */,
 				0D8C9BD21FFCC9AB00436337 /* User.swift in Sources */,
+				0DC79A281FFF5B3300DDB0E8 /* DigitButton.swift in Sources */,
 				0D8C9BC91FFC862B00436337 /* GameScenceViewController.swift in Sources */,
 				0DF4B4F51FE8EBFB00C9A122 /* StartViewController.swift in Sources */,
 				0D8C9BCD1FFCB50100436337 /* GameEngine.swift in Sources */,

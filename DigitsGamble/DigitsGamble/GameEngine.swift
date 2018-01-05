@@ -7,17 +7,24 @@
 //
 
 import Foundation
+import RxCocoa
+import RxSwift
 
 class GameEngine {
     
     static let shared = GameEngine()
     
-    var model: GameModel?
+    func start() {
+
+    }
     
-    func start(with user: User) {
-        print("[\(#line)] : \(type(of: self)).\(#function)")
-        model = GameModel(initialUser: user)
-        print(GameEngine.shared.model?.currentUser)
+    func generateUsers() -> [User] {
+        let userA = User(name: "A")
+        let userB = User(name: "B")
+        return [
+            userA,
+            userB
+        ]
     }
     
 }
