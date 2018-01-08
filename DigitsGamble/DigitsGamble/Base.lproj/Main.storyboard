@@ -180,35 +180,62 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aDB-9T-QQw">
-                                <rect key="frame" x="146" y="273.5" width="375" height="30"/>
+                                <rect key="frame" x="288" y="273.5" width="91" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Offer a price to buy the digit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q7Y-pa-VEV">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="iJi-M8-R1A"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkC-vG-Y7G">
-                                        <rect key="frame" x="320" y="0.0" width="55" height="30"/>
-                                        <state key="normal" title="Confirm"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                        <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Raise">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMy-Nv-YKt">
+                                        <rect key="frame" x="58" y="0.0" width="33" height="30"/>
+                                        <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Pass">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtD-ob-P9F">
+                                <rect key="frame" x="596" y="331" width="51" height="36"/>
+                                <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKj-mb-BwL">
+                                <rect key="frame" x="20" y="331" width="120" height="36"/>
+                                <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back To Main">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="JOh-fn-oyX" firstAttribute="top" secondItem="TtD-ob-P9F" secondAttribute="bottom" constant="8" id="0JE-T6-eiY"/>
                             <constraint firstItem="VV5-eo-DCC" firstAttribute="centerX" secondItem="QUq-iV-aog" secondAttribute="centerX" id="8iq-Y2-SDC"/>
                             <constraint firstItem="VV5-eo-DCC" firstAttribute="top" secondItem="Zn8-Fu-8Kz" secondAttribute="bottom" constant="30" id="JW4-sF-DlX"/>
+                            <constraint firstItem="EKj-mb-BwL" firstAttribute="leading" secondItem="QUq-iV-aog" secondAttribute="leadingMargin" id="KZN-Dg-eCl"/>
+                            <constraint firstItem="TtD-ob-P9F" firstAttribute="trailing" secondItem="QUq-iV-aog" secondAttribute="trailingMargin" id="PPn-Sj-41R"/>
                             <constraint firstItem="aDB-9T-QQw" firstAttribute="centerX" secondItem="QUq-iV-aog" secondAttribute="centerX" id="eyS-vL-XBH"/>
                             <constraint firstItem="nF7-8Y-ted" firstAttribute="centerY" secondItem="QUq-iV-aog" secondAttribute="centerY" id="id1-Ea-r8e"/>
                             <constraint firstItem="nF7-8Y-ted" firstAttribute="top" secondItem="VV5-eo-DCC" secondAttribute="bottom" constant="37" id="lDf-rl-xIQ"/>
                             <constraint firstItem="nF7-8Y-ted" firstAttribute="centerX" secondItem="QUq-iV-aog" secondAttribute="centerX" id="nL6-xW-1OX"/>
                             <constraint firstItem="aDB-9T-QQw" firstAttribute="top" secondItem="nF7-8Y-ted" secondAttribute="bottom" constant="22.5" id="sSv-qb-Wkd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nF7-8Y-ted" secondAttribute="trailing" constant="15" id="tCX-Li-dxb"/>
+                            <constraint firstItem="JOh-fn-oyX" firstAttribute="top" secondItem="EKj-mb-BwL" secondAttribute="bottom" constant="8" id="ya6-BN-dW5"/>
                             <constraint firstItem="nF7-8Y-ted" firstAttribute="leading" secondItem="QUq-iV-aog" secondAttribute="leadingMargin" constant="15" id="z7d-TU-Y5H"/>
                         </constraints>
                         <connections>
@@ -216,7 +243,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="confirm" destination="VkC-vG-Y7G" id="fwS-Wh-DPo"/>
+                        <outlet property="backToMain" destination="EKj-mb-BwL" id="cHE-gA-jpS"/>
                         <outlet property="digit1" destination="Yrc-2V-aW8" id="WkG-cn-CY2"/>
                         <outlet property="digit2" destination="656-fD-35p" id="RjX-xj-TqU"/>
                         <outlet property="digit3" destination="koS-Fj-Uaz" id="sPs-aJ-sO3"/>
@@ -226,7 +253,9 @@
                         <outlet property="digit7" destination="SIJ-3f-kL5" id="OVO-M1-u6Y"/>
                         <outlet property="digit8" destination="Ki5-bv-q4Y" id="XIt-CZ-tpb"/>
                         <outlet property="digit9" destination="Yxj-Wv-yxz" id="plS-20-0Iw"/>
-                        <outlet property="offerTextField" destination="Q7Y-pa-VEV" id="oqp-n8-d1C"/>
+                        <outlet property="pass" destination="BMy-Nv-YKt" id="4Mb-cu-RXs"/>
+                        <outlet property="raise" destination="VkC-vG-Y7G" id="zlG-ep-xUB"/>
+                        <outlet property="resetGame" destination="TtD-ob-P9F" id="g5f-op-6nQ"/>
                         <outlet property="userAInfo" destination="wrs-mQ-VW4" id="dJn-tU-wxp"/>
                         <outlet property="userBInfo" destination="TVG-Kf-eEe" id="cR5-JS-jOH"/>
                         <outlet property="userInfoStack" destination="aDB-9T-QQw" id="9Dt-Yy-aZe"/>
@@ -239,7 +268,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="34" y="1204"/>
+            <point key="canvasLocation" x="63" y="1193"/>
         </scene>
     </scenes>
 </document>

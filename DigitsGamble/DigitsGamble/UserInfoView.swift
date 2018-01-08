@@ -50,6 +50,11 @@ class UserInfoView: UIView {
                 .bind(to: digitsOwnedLabel.rx.text)
                 .addDisposableTo(bag)
             
+            user?.availableFund
+                .asObservable()
+                .map { String($0) }
+                .bind(to: moneyValueLabel.rx.text)
+                .addDisposableTo(bag)
         }
     }
     

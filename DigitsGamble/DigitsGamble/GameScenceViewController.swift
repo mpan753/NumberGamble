@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import HexColors
+import PCLBlurEffectAlert
 
 
 class GameScenceViewController: UIViewController {
@@ -29,7 +30,12 @@ class GameScenceViewController: UIViewController {
     @IBOutlet weak var userAInfo: UserInfoView!
     @IBOutlet weak var userBInfo: UserInfoView!
     
-    @IBOutlet weak var offerTextField: UITextField!
+    @IBOutlet weak var raise: UIButton!
+    @IBOutlet weak var pass: UIButton!
+    
+    @IBOutlet weak var resetGame: UIButton!
+    
+    @IBOutlet weak var backToMain: UIButton!
     
     let disposeBag = DisposeBag()
     
@@ -58,10 +64,16 @@ class GameScenceViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    @IBOutlet weak var confirm: UIButton!
-    
-    
     func racBind() {
+        
+        backToMain
+            .rx
+            .tap
+            .asObservable()
+            .subscribe(onNext: { [unowned self] (_) in
+                self.dismiss(animated: true, completion: nil)
+            })
+            .addDisposableTo(disposeBag)
         
         viewModel?.currentDigit
             .asObservable()
@@ -85,37 +97,76 @@ class GameScenceViewController: UIViewController {
             })
             .addDisposableTo(disposeBag)
         
-        offerTextField
-            .rx
-            .text
-            .asObservable()
-            .map { (text) -> Bool in
-                !(text?.isEmpty)!
-            }
-            .bind(to: confirm.rx.isEnabled)
-            .addDisposableTo(disposeBag)
-        
-        
-        confirm
+        raise
             .rx
             .tap
             .asObservable()
             .subscribe(onNext: { [unowned self] (_) in
-                self.viewModel?.currentUser.value?.offeredPrice.value = Int(self.offerTextField.text!)!
-                self.viewModel?.currentUser.value?.offeredMark = true
-                self.mayJudgeResults()
-                self.resetPirceOfferTextField()
+                let alertController = PCLBlurEffectAlertController(title: "Raise",
+                                                                   message: "How much do you want to raise?",
+                                                                   style: .alert)
+                let currentOffer: Variable<String?> = Variable("")
+                alertController.addTextField(with: { (textField) in
+                    textField?.placeholder = "Please offer a price"
+                    textField?.keyboardType = .numberPad
+                    textField?.rx.text.bind(to: currentOffer).addDisposableTo(self.disposeBag)
+                })
+                let okAction = PCLBlurEffectAlertAction(title: "OK", style: .default, handler: { [unowned self] (_) in
+                    self.viewModel?.currentUser.value?.offeredPrice.value = Int(currentOffer.value!)!
+                    self.viewModel?.currentUser.value?.availableFund.value -= Int(currentOffer.value!)!
+                    self.changeToNextPlayer()
+                })
+                
+                currentOffer.asObservable().subscribe(onNext: { (offer) in
+                    if let price = Int(offer!) {
+                        okAction.isEnabled = (self.viewModel?.currentUser.value?.availableFund.value)! >= price
+                    }
+                })
+                .addDisposableTo(self.disposeBag)
+             
+                alertController.addAction(okAction)
+                let cancelAction = PCLBlurEffectAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+                    
+                })
+                alertController.addAction(cancelAction)
+                
+                alertController.show()
+            })
+            .addDisposableTo(disposeBag)
+        
+        viewModel?.userCanRaise
+            .asObservable()
+            .bind(to: raise.rx.isEnabled)
+            .addDisposableTo(disposeBag)
+        
+        pass
+            .rx
+            .tap
+            .asObservable()
+            .subscribe(onNext: { [unowned self] (_) in
+                self.viewModel?.currentUser.value?.didPass = true
                 self.changeToNextPlayer()
             })
             .addDisposableTo(disposeBag)
         
-        viewModel?.winner.asObservable().subscribe(onNext: { (result) in
-            if let winner = result {
-                print("The Winner is \(winner)!!!")
-                
-            }
-        })
-        .addDisposableTo(disposeBag)
+        
+        viewModel?.winner
+            .asObservable()
+            .subscribe(onNext: { (result) in
+                if let winner = result {
+                    print("The Winner is \(winner)!!!")                    
+                }
+            })
+            .addDisposableTo(disposeBag)
+
+        resetGame
+            .rx
+            .tap
+            .asObservable()
+            .subscribe(onNext: { [unowned self] (_) in
+                self.viewModel?.resetGame()
+            })
+            .addDisposableTo(disposeBag)
         
     }
     
@@ -135,10 +186,6 @@ class GameScenceViewController: UIViewController {
             button.shouldHighlight.value = false
         }
         digits[index].shouldHighlight.value = true
-    }
-    
-    func resetPirceOfferTextField() {
-        self.offerTextField.text = ""
     }
     
     func changeToNextPlayer() {

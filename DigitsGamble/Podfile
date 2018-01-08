@@ -8,8 +8,9 @@ target 'DigitsGamble' do
   # Pods for DigitsGamble
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
-  pod 'HexColors'   '~> 6.0.0'
+  pod 'HexColors',   '~> 6.0.0'
   pod 'SnapKit',    '~> 3.0.0'
+  pod 'PCLBlurEffectAlert'
 
   target 'DigitsGambleTests' do
     inherit! :search_paths

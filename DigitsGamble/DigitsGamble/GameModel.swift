@@ -25,8 +25,13 @@ class GameModel {
     
     let winner: Variable<String?> = Variable(nil)
     
+    let userCanRaise: Variable<Bool> = Variable(true)
+    
+    var firstMoveUserIndex: Int
+    
     init(startViewModel model: StartViewModel) {
         self.users = model.users
+        self.firstMoveUserIndex = model.selectedUserIndex!
         self.currentUser.value = self.users[model.selectedUserIndex!]
         self.leftOverNumbers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: Array(1...9)) as! [Int]
         self.shouldGenergateNext = true
@@ -53,7 +58,13 @@ class GameModel {
         if let index = users.index(where: {$0 == currentUser.value!}) {
             let nextIndex = (index + 1) % users.count
             currentUser.value = users[nextIndex]
+            checkIfUserCanRaise()
         }
+    }
+    
+    private func checkIfUserCanRaise() {
+        userCanRaise.value = (currentUser.value?.availableFund.value)! > 0
+        print(userCanRaise.value)
     }
     
     func judgeResults() {
@@ -70,16 +81,17 @@ class GameModel {
         shouldGenergateNext = true
         generateNextDigit()
         
-        userA.offeredPrice.value = 0
-        userB.offeredPrice.value = 0
-        userA.offeredMark = false
-        userB.offeredMark = false
+        users.forEach { (user) in
+            user.clearForNextRound()
+        }
     }
     
     func shouldMakeAJudge() -> Bool {
-        return users.reduce(true, { (result, user) -> Bool in
-            result && user.offeredMark
-        })
+        
+        let allPass = users.reduce(true) { (result, user) -> Bool in
+            result && user.didPass
+        }
+        if allPass { return true }
     }
     
     func decideWinner() {
@@ -88,5 +100,16 @@ class GameModel {
         let result = sumA > sumB ? "A" : "B"
         print(result)
         winner.value = result
+    }
+    
+    func resetGame() -> Void {
+        leftOverNumbers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: Array(1...9)) as! [Int]
+        shouldGenergateNext = true
+        users.forEach { (user) in
+            user.reset()
+        }
+        currentUser.value = users[firstMoveUserIndex]
+        userCanRaise.value = true
+        generateNextDigit()
     }
 }

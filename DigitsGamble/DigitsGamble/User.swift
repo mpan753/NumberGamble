@@ -14,19 +14,35 @@ class User: Equatable {
 
     var name: String
 
-    var availableFund: Int
+    var availableFund: Variable<Int>
     
     var ownedDigits: Variable<[Int]>
 
     init(name: String) {
         self.name = name
-        self.availableFund = 1000
+        self.availableFund = Variable(1000)
         self.ownedDigits = Variable([])
     }
 
     var offeredPrice: Variable<Int> = Variable(0)
 
-    var offeredMark: Bool = false
+    var didOffer: Bool = false
+    
+    var didPass: Bool = false
+    
+    func reset() {
+        availableFund.value = 1000
+        ownedDigits.value = []
+        didOffer = false
+        didPass = false
+        offeredPrice.value = 0
+    }
+    
+    func clearForNextRound() -> Void {
+        didPass = false
+        didOffer = false
+        offeredPrice.value = 0
+    }
     
 }
 
