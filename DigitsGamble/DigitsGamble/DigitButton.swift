@@ -13,13 +13,15 @@ import RxSwift
 
 class DigitButton: UIButton {
     
-    var shouldHighlight = Variable(false)
-    var hasSold = Variable(false)
+    let shouldHighlight = Variable(false)
+    let hasSold = Variable(false)
+    let hasPassed = Variable(false)
     let bag = DisposeBag()
     
     private let highlightColor = UIColor.orange
     private let availableColor = HexColor("7DA8EF")!
     private let soldColor = UIColor.lightGray
+    private let passedColor = UIColor.yellow
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,10 +37,18 @@ class DigitButton: UIButton {
         racBind()
     }
     
+    func reset() {
+        shouldHighlight.value = false
+        hasSold.value = false
+        hasPassed.value = false
+    }
+    
     func racBind() {
         
-        Observable.combineLatest(shouldHighlight.asObservable(), hasSold.asObservable()).subscribe(onNext: { (highlight, sold) in
-            self.backgroundColor = sold ? self.soldColor : highlight ? self.highlightColor : self.availableColor
+        Observable.combineLatest(shouldHighlight.asObservable(), hasSold.asObservable(), hasPassed.asObservable()).subscribe(onNext: { (highlight, sold, passed) in
+            self.backgroundColor = sold ? self.soldColor :
+                passed ? self.passedColor :
+                highlight ? self.highlightColor : self.availableColor
             
         })
         .addDisposableTo(bag)

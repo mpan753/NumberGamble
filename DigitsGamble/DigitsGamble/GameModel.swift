@@ -21,13 +21,21 @@ class GameModel {
     
     var shouldGenergateNext: Bool
     
-    var currentDigit: Variable<Int> = Variable(0)
+    let currentDigit: Variable<Int> = Variable(0)
     
     let winner: Variable<String?> = Variable(nil)
     
     let userCanRaise: Variable<Bool> = Variable(true)
     
     var firstMoveUserIndex: Int
+    
+    var maxOfferPerRound: Int {
+        let maxUser = users.max { (A, B) -> Bool in
+            A.offer.value.price < B.offer.value.price
+            }
+        
+        return (maxUser?.offer.value.price)!
+    }
     
     init(startViewModel model: StartViewModel) {
         self.users = model.users
@@ -37,16 +45,29 @@ class GameModel {
         self.shouldGenergateNext = true
     }
     
-    func generateNextDigit() {
+    private func generateNextDigit() {
         _ = nextDigit()
+    }
+    
+    func startNewRound() {
+        shouldGenergateNext = true
+        generateNextDigit()
+        users.forEach { (user) in
+            user.clearForNextRound()
+        }
+        currentUser.value = users[firstMoveUserIndex]
     }
     
     private func nextDigit() -> Int {
         if !shouldGenergateNext {
             return currentDigit.value
         }
-        if leftOverNumbers.count <= 0 {
-            decideWinner()
+        if leftOverNumbers.count == 0 {
+            let user = users.max(by: { (user1, user2) -> Bool in
+                user1.digitsSum < user2.digitsSum
+            })
+            
+            winner.value = user?.name
             return 0
         }
         currentDigit.value = leftOverNumbers.popLast()!
@@ -63,43 +84,49 @@ class GameModel {
     }
     
     private func checkIfUserCanRaise() {
-        userCanRaise.value = (currentUser.value?.availableFund.value)! > 0
-        print(userCanRaise.value)
-    }
-    
-    func judgeResults() {
-        let userA = users[0]
-        let userB = users[1]
-        
-        if userA.offeredPrice.value > userB.offeredPrice.value {
-            userA.ownedDigits.value.append(currentDigit.value)
-        } else {
-            userB.ownedDigits.value.append(currentDigit.value)
-        }
-        print(userA.ownedDigits.value)
-        print(userB.ownedDigits.value)
-        shouldGenergateNext = true
-        generateNextDigit()
-        
-        users.forEach { (user) in
-            user.clearForNextRound()
+        if let fund = currentUser.value?.availableFund.value {
+            userCanRaise.value = fund > 0 && fund > maxOfferPerRound
         }
     }
     
     func shouldMakeAJudge() -> Bool {
-        
-        let allPass = users.reduce(true) { (result, user) -> Bool in
-            result && user.didPass
+        let allDidOffer = users.reduce(true) { (offer, user) -> Bool in
+            offer && user.didOffer
         }
-        if allPass { return true }
+        guard allDidOffer else {
+            return false
+        }
+        
+        return (users.count - numOfPassedUsers) <= 1
     }
     
-    func decideWinner() {
-        let sumA = users[0].ownedDigits.value.reduce(0, +)
-        let sumB = users[1].ownedDigits.value.reduce(0, +)
-        let result = sumA > sumB ? "A" : "B"
-        print(result)
-        winner.value = result
+    var digitBuyer: User? {
+        if numOfPassedUsers == 1 {
+            return users.filter({ (user) -> Bool in
+                switch user.offer.value {
+                case .price(_):
+                    return true
+                default:
+                    return false
+                }
+            }).first
+        }
+        return nil
+    }
+    
+    var numOfPassedUsers: Int {
+        return users.filter { (user) -> Bool in
+            switch user.offer.value {
+            case .pass:
+                return true
+            default:
+                return false
+            }
+            }.count
+    }
+    
+    var allUsersDidPassed: Bool {
+        return numOfPassedUsers == users.count
     }
     
     func resetGame() -> Void {
@@ -110,6 +137,8 @@ class GameModel {
         }
         currentUser.value = users[firstMoveUserIndex]
         userCanRaise.value = true
-        generateNextDigit()
+        startNewRound()
     }
+    
+    
 }

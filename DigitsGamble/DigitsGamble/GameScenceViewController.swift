@@ -43,6 +43,13 @@ class GameScenceViewController: UIViewController {
     
     var viewModel: GameModel?
     
+    var currentButton: DigitButton? {
+        guard (viewModel?.currentDigit.value)! > 0 else {
+            return nil
+        }
+        return digits[(viewModel?.currentDigit.value)! - 1]
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +59,7 @@ class GameScenceViewController: UIViewController {
         userAInfo.user = viewModel?.users[0]
         userBInfo.user = viewModel?.users[1]
         
-        viewModel?.generateNextDigit()
+        viewModel?.startNewRound()
     }
     
     override func didReceiveMemoryWarning() {
@@ -112,21 +119,28 @@ class GameScenceViewController: UIViewController {
                     textField?.rx.text.bind(to: currentOffer).addDisposableTo(self.disposeBag)
                 })
                 let okAction = PCLBlurEffectAlertAction(title: "OK", style: .default, handler: { [unowned self] (_) in
-                    self.viewModel?.currentUser.value?.offeredPrice.value = Int(currentOffer.value!)!
-                    self.viewModel?.currentUser.value?.availableFund.value -= Int(currentOffer.value!)!
-                    self.changeToNextPlayer()
+                    guard let offer = Int(currentOffer.value!) else { return }
+                    self.viewModel?.currentUser.value?.didOffer = true
+                    self.viewModel?.currentUser.value?.offer.value = .price(offer)
+                    self.makeAJudge()
                 })
                 
                 currentOffer.asObservable().subscribe(onNext: { (offer) in
+                    
                     if let price = Int(offer!) {
-                        okAction.isEnabled = (self.viewModel?.currentUser.value?.availableFund.value)! >= price
+                        okAction.isEnabled = (
+                            ((self.viewModel?.currentUser.value?.availableFund.value)! >= price)
+                            &&
+                            price > (self.viewModel?.maxOfferPerRound)!
+                        )
                     }
                 })
                 .addDisposableTo(self.disposeBag)
              
                 alertController.addAction(okAction)
-                let cancelAction = PCLBlurEffectAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
-                    
+                let cancelAction = PCLBlurEffectAlertAction(title: "Cancel", style: .cancel, handler: { [unowned self] (_) in
+                    self.viewModel?.currentUser.value?.didOffer = false
+                    self.viewModel?.currentUser.value?.offer.value = .none
                 })
                 alertController.addAction(cancelAction)
                 
@@ -144,8 +158,9 @@ class GameScenceViewController: UIViewController {
             .tap
             .asObservable()
             .subscribe(onNext: { [unowned self] (_) in
-                self.viewModel?.currentUser.value?.didPass = true
-                self.changeToNextPlayer()
+                self.viewModel?.currentUser.value?.didOffer = true
+                self.viewModel?.currentUser.value?.offer.value = .pass
+                self.makeAJudge()
             })
             .addDisposableTo(disposeBag)
         
@@ -154,7 +169,16 @@ class GameScenceViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { (result) in
                 if let winner = result {
-                    print("The Winner is \(winner)!!!")                    
+                    
+                    let alertController = PCLBlurEffectAlertController(title: "We Have A Winner!", message: "The Winner is \(winner)!", style: .alert)
+                    alertController.addAction(PCLBlurEffectAlertAction(title: "Restart Game", style: .default, handler: { [unowned self] (_) in
+                        self.digits.forEach({ (button) in
+                            button.reset()
+                        })
+                        self.viewModel?.resetGame()
+                    }))
+                    alertController.show()
+                    
                 }
             })
             .addDisposableTo(disposeBag)
@@ -164,21 +188,13 @@ class GameScenceViewController: UIViewController {
             .tap
             .asObservable()
             .subscribe(onNext: { [unowned self] (_) in
+                self.digits.forEach({ (button) in
+                    button.reset()
+                })
                 self.viewModel?.resetGame()
             })
             .addDisposableTo(disposeBag)
         
-    }
-    
-    func mayJudgeResults() {
-        if (viewModel?.shouldMakeAJudge())! {
-            if let currentDigit = viewModel?.currentDigit.value {
-                digits[currentDigit - 1].hasSold.value = true
-                
-            }
-            
-            viewModel?.judgeResults()
-        }
     }
     
     func highlightButton(index: Int) {
@@ -192,6 +208,27 @@ class GameScenceViewController: UIViewController {
         viewModel?.nextPlayer()
     }
     
+    func makeAJudge() -> Void {
+        changeToNextPlayer()
+        guard (viewModel?.shouldMakeAJudge())! else {
+            return
+        }
+        
+        if (viewModel?.allUsersDidPassed)! {
+            currentButton?.hasPassed.value = true
+        } else {
+            currentButton?.hasSold.value = true
+            if let buyer = viewModel?.digitBuyer {
+                let offer = buyer.offer.value.price
+                buyer.availableFund.value -= offer
+                buyer.ownedDigits.value.append((viewModel?.currentDigit.value)!)
+            }
+        }
+        
+        viewModel?.startNewRound()
+        
+        
+    }
     static let Identifier = "GameScene"
     
 }

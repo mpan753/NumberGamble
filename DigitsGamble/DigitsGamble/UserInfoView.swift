@@ -36,9 +36,17 @@ class UserInfoView: UIView {
             
             nameLabel.text = user?.name
             
-            user?.offeredPrice
+            user?.offer
                 .asObservable()
-                .map{String($0)}
+                .filter({ (offer) -> Bool in
+                    switch offer {
+                    case .pass:
+                        return false
+                    default:
+                        return true
+                    }
+                })
+                .map{$0.description}
                 .bind(to: currentOfferLabel.rx.text)
                 .addDisposableTo(bag)
             

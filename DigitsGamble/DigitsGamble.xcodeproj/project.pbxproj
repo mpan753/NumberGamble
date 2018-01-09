@@ -14,7 +14,6 @@
 		0D8C9BD01FFCC98000436337 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C9BCF1FFCC98000436337 /* GameModel.swift */; };
 		0D8C9BD21FFCC9AB00436337 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8C9BD11FFCC9AB00436337 /* User.swift */; };
 		0DC79A281FFF5B3300DDB0E8 /* DigitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC79A271FFF5B3300DDB0E8 /* DigitButton.swift */; };
-		0DDF2F4D20030EDB0077CDE4 /* GameJudge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDF2F4C20030EDB0077CDE4 /* GameJudge.swift */; };
 		0DF4B4C71FE8E24700C9A122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF4B4C61FE8E24700C9A122 /* AppDelegate.swift */; };
 		0DF4B4CC1FE8E24700C9A122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4B4CA1FE8E24700C9A122 /* Main.storyboard */; };
 		0DF4B4CE1FE8E24700C9A122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4B4CD1FE8E24700C9A122 /* Assets.xcassets */; };
@@ -52,7 +51,6 @@
 		0D8C9BCF1FFCC98000436337 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		0D8C9BD11FFCC9AB00436337 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0DC79A271FFF5B3300DDB0E8 /* DigitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitButton.swift; sourceTree = "<group>"; };
-		0DDF2F4C20030EDB0077CDE4 /* GameJudge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameJudge.swift; sourceTree = "<group>"; };
 		0DF4B4C31FE8E24700C9A122 /* DigitsGamble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitsGamble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF4B4C61FE8E24700C9A122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DF4B4CB1FE8E24700C9A122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				0D8C9BCC1FFCB50100436337 /* GameEngine.swift */,
 				0D8C9BCF1FFCC98000436337 /* GameModel.swift */,
 				0D11C00C1FFDF55100984DFD /* StartViewModel.swift */,
-				0DDF2F4C20030EDB0077CDE4 /* GameJudge.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -543,7 +540,6 @@
 				0D11C00D1FFDF55100984DFD /* StartViewModel.swift in Sources */,
 				0D8C9BD01FFCC98000436337 /* GameModel.swift in Sources */,
 				0DF4B4C71FE8E24700C9A122 /* AppDelegate.swift in Sources */,
-				0DDF2F4D20030EDB0077CDE4 /* GameJudge.swift in Sources */,
 				0D11C0111FFE0AE500984DFD /* UserInfoView.swift in Sources */,
 				0D8C9BD21FFCC9AB00436337 /* User.swift in Sources */,
 				0DC79A281FFF5B3300DDB0E8 /* DigitButton.swift in Sources */,

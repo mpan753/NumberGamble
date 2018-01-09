@@ -10,6 +10,32 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+enum Offer  {
+    case pass
+    case price(Int)
+    case none
+    
+    var description: String {
+        switch self {
+        case .pass:
+            return "pass"
+        case .price(let value):
+            return "\(value)"
+        case .none:
+            return ""
+        }
+    }
+    
+    var price: Int {
+        switch self {
+        case .price(let value):
+            return value
+        default:
+            return 0
+        }
+    }
+}
+
 class User: Equatable {
 
     var name: String
@@ -24,24 +50,24 @@ class User: Equatable {
         self.ownedDigits = Variable([])
     }
 
-    var offeredPrice: Variable<Int> = Variable(0)
+    var offer: Variable<Offer> = Variable(.none)
 
     var didOffer: Bool = false
-    
-    var didPass: Bool = false
     
     func reset() {
         availableFund.value = 1000
         ownedDigits.value = []
         didOffer = false
-        didPass = false
-        offeredPrice.value = 0
+        offer.value = .none
     }
     
     func clearForNextRound() -> Void {
-        didPass = false
         didOffer = false
-        offeredPrice.value = 0
+        offer.value = .none
+    }
+    
+    var digitsSum: Int {
+        return ownedDigits.value.reduce(0, +)
     }
     
 }
