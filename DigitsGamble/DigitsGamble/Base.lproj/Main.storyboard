@@ -31,7 +31,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="tjN-RA-v1Y">
-                                        <rect key="frame" x="22.5" y="100" width="194" height="30"/>
+                                        <rect key="frame" x="23" y="100" width="194" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMa-7G-Ltg">
                                                 <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
@@ -50,7 +50,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcd-Dz-Jfm">
-                                        <rect key="frame" x="102.5" y="200" width="34" height="30"/>
+                                        <rect key="frame" x="103" y="200" width="34" height="30"/>
                                         <state key="normal" title="Start"/>
                                         <connections>
                                             <segue destination="Mvk-4E-fgk" kind="show" identifier="GameScene" id="Oj7-Em-qgs"/>
@@ -87,10 +87,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VV5-eo-DCC">
-                                <rect key="frame" x="118.5" y="50" width="430" height="36.5"/>
+                                <rect key="frame" x="119" y="50" width="430" height="37"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrc-2V-aW8" customClass="DigitButton" customModule="DigitsGamble" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="36.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="37"/>
                                         <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="1">
@@ -98,7 +98,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="656-fD-35p" customClass="DigitButton" customModule="DigitsGamble" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="0.0" width="30" height="36.5"/>
+                                        <rect key="frame" x="50" y="0.0" width="30" height="37"/>
                                         <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="2">
@@ -106,7 +106,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koS-Fj-Uaz" customClass="DigitButton" customModule="DigitsGamble" customModuleProvider="target">
-                                        <rect key="frame" x="100" y="0.0" width="30" height="36.5"/>
+                                        <rect key="frame" x="100" y="0.0" width="30" height="37"/>
                                         <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="3">
@@ -114,7 +114,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F29-OF-3rZ" customClass="DigitButton" customModule="DigitsGamble" customModuleProvider="target">
-                                        <rect key="frame" x="150" y="0.0" width="30" height="36.5"/>
+                                        <rect key="frame" x="150" y="0.0" width="30" height="37"/>
                                         <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="4">
@@ -122,7 +122,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POu-II-don" customClass="DigitButton" customModule="DigitsGamble" customModuleProvider="target">
-                                        <rect key="frame" x="200" y="0.0" width="30" height="36.5"/>
+                                        <rect key="frame" x="200" y="0.0" width="30" height="37"/>
                                         <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="5">
@@ -130,7 +130,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4Z-wn-WQ0" customClass="DigitButton" customModule="DigitsGamble" customModuleProvider="target">
-                                        <rect key="frame" x="250" y="0.0" width="30" height="36.5"/>
+                                        <rect key="frame" x="250" y="0.0" width="30" height="37"/>
                                         <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="6">
@@ -138,7 +138,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIJ-3f-kL5" customClass="DigitButton" customModule="DigitsGamble" customModuleProvider="target">
-                                        <rect key="frame" x="300" y="0.0" width="30" height="36.5"/>
+                                        <rect key="frame" x="300" y="0.0" width="30" height="37"/>
                                         <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="7">
@@ -146,7 +146,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki5-bv-q4Y" customClass="DigitButton" customModule="DigitsGamble" customModuleProvider="target">
-                                        <rect key="frame" x="350" y="0.0" width="30" height="36.5"/>
+                                        <rect key="frame" x="350" y="0.0" width="30" height="37"/>
                                         <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="8">
@@ -154,7 +154,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxj-Wv-yxz" customClass="DigitButton" customModule="DigitsGamble" customModuleProvider="target">
-                                        <rect key="frame" x="400" y="0.0" width="30" height="36.5"/>
+                                        <rect key="frame" x="400" y="0.0" width="30" height="37"/>
                                         <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="9">
@@ -164,7 +164,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="nF7-8Y-ted">
-                                <rect key="frame" x="35" y="123.5" width="597" height="128"/>
+                                <rect key="frame" x="35" y="124" width="597" height="128"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrs-mQ-VW4" customClass="UserInfoView" customModule="DigitsGamble" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="128"/>
@@ -204,38 +204,31 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtD-ob-P9F">
-                                <rect key="frame" x="596" y="331" width="51" height="36"/>
-                                <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKj-mb-BwL">
-                                <rect key="frame" x="20" y="331" width="120" height="36"/>
-                                <color key="backgroundColor" red="0.49019607840000001" green="0.6588235294" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Back To Main">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Iu-gv-Stu">
+                                <rect key="frame" x="0.0" y="331" width="667" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" style="plain" id="VUC-Ij-mFZ"/>
+                                    <barButtonItem systemItem="flexibleSpace" id="yj1-VE-Chx"/>
+                                    <barButtonItem title="Undo" id="BMa-1m-1uw"/>
+                                    <barButtonItem systemItem="flexibleSpace" id="xLe-uf-KJs"/>
+                                    <barButtonItem style="plain" systemItem="refresh" id="RA5-0c-sZz"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="JOh-fn-oyX" firstAttribute="top" secondItem="TtD-ob-P9F" secondAttribute="bottom" constant="8" id="0JE-T6-eiY"/>
+                            <constraint firstItem="3Iu-gv-Stu" firstAttribute="bottom" secondItem="JOh-fn-oyX" secondAttribute="top" id="4O7-Ua-KAv"/>
+                            <constraint firstItem="3Iu-gv-Stu" firstAttribute="centerX" secondItem="aDB-9T-QQw" secondAttribute="centerX" id="887-B2-bXa"/>
                             <constraint firstItem="VV5-eo-DCC" firstAttribute="centerX" secondItem="QUq-iV-aog" secondAttribute="centerX" id="8iq-Y2-SDC"/>
                             <constraint firstItem="VV5-eo-DCC" firstAttribute="top" secondItem="Zn8-Fu-8Kz" secondAttribute="bottom" constant="30" id="JW4-sF-DlX"/>
-                            <constraint firstItem="EKj-mb-BwL" firstAttribute="leading" secondItem="QUq-iV-aog" secondAttribute="leadingMargin" id="KZN-Dg-eCl"/>
-                            <constraint firstItem="TtD-ob-P9F" firstAttribute="trailing" secondItem="QUq-iV-aog" secondAttribute="trailingMargin" id="PPn-Sj-41R"/>
+                            <constraint firstItem="3Iu-gv-Stu" firstAttribute="leading" secondItem="QUq-iV-aog" secondAttribute="leading" id="PyS-Nr-6nI"/>
                             <constraint firstItem="aDB-9T-QQw" firstAttribute="centerX" secondItem="QUq-iV-aog" secondAttribute="centerX" id="eyS-vL-XBH"/>
                             <constraint firstItem="nF7-8Y-ted" firstAttribute="centerY" secondItem="QUq-iV-aog" secondAttribute="centerY" id="id1-Ea-r8e"/>
                             <constraint firstItem="nF7-8Y-ted" firstAttribute="top" secondItem="VV5-eo-DCC" secondAttribute="bottom" constant="37" id="lDf-rl-xIQ"/>
                             <constraint firstItem="nF7-8Y-ted" firstAttribute="centerX" secondItem="QUq-iV-aog" secondAttribute="centerX" id="nL6-xW-1OX"/>
-                            <constraint firstItem="aDB-9T-QQw" firstAttribute="top" secondItem="nF7-8Y-ted" secondAttribute="bottom" constant="22.5" id="sSv-qb-Wkd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nF7-8Y-ted" secondAttribute="trailing" constant="15" id="tCX-Li-dxb"/>
-                            <constraint firstItem="JOh-fn-oyX" firstAttribute="top" secondItem="EKj-mb-BwL" secondAttribute="bottom" constant="8" id="ya6-BN-dW5"/>
+                            <constraint firstItem="3Iu-gv-Stu" firstAttribute="top" secondItem="aDB-9T-QQw" secondAttribute="bottom" constant="27" id="w2e-rl-HlJ"/>
                             <constraint firstItem="nF7-8Y-ted" firstAttribute="leading" secondItem="QUq-iV-aog" secondAttribute="leadingMargin" constant="15" id="z7d-TU-Y5H"/>
                         </constraints>
                         <connections>
@@ -243,7 +236,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="backToMain" destination="EKj-mb-BwL" id="cHE-gA-jpS"/>
+                        <outlet property="backToMain" destination="VUC-Ij-mFZ" id="YoU-Jk-4Sl"/>
                         <outlet property="digit1" destination="Yrc-2V-aW8" id="WkG-cn-CY2"/>
                         <outlet property="digit2" destination="656-fD-35p" id="RjX-xj-TqU"/>
                         <outlet property="digit3" destination="koS-Fj-Uaz" id="sPs-aJ-sO3"/>
@@ -255,7 +248,7 @@
                         <outlet property="digit9" destination="Yxj-Wv-yxz" id="plS-20-0Iw"/>
                         <outlet property="pass" destination="BMy-Nv-YKt" id="4Mb-cu-RXs"/>
                         <outlet property="raise" destination="VkC-vG-Y7G" id="zlG-ep-xUB"/>
-                        <outlet property="resetGame" destination="TtD-ob-P9F" id="g5f-op-6nQ"/>
+                        <outlet property="resetGame" destination="RA5-0c-sZz" id="Fmx-5H-TL9"/>
                         <outlet property="userAInfo" destination="wrs-mQ-VW4" id="dJn-tU-wxp"/>
                         <outlet property="userBInfo" destination="TVG-Kf-eEe" id="cR5-JS-jOH"/>
                         <outlet property="userInfoStack" destination="aDB-9T-QQw" id="9Dt-Yy-aZe"/>

@@ -33,9 +33,9 @@ class GameScenceViewController: UIViewController {
     @IBOutlet weak var raise: UIButton!
     @IBOutlet weak var pass: UIButton!
     
-    @IBOutlet weak var resetGame: UIButton!
+    @IBOutlet weak var resetGame: UIBarButtonItem!
     
-    @IBOutlet weak var backToMain: UIButton!
+    @IBOutlet weak var backToMain: UIBarButtonItem!
     
     let disposeBag = DisposeBag()
     
@@ -226,7 +226,6 @@ class GameScenceViewController: UIViewController {
         }
         
         viewModel?.startNewRound()
-        
         
     }
     static let Identifier = "GameScene"
